@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { EMAIL, PHONE, PHONE_LINK, COMPANY_NAME, PRODUCT_NAME } from '../constants'
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <img src="/logo.png" alt="Limes Digital" className="h-10 brightness-0 invert" />
+              <img src="/logo.png" alt="Limes Digital" className="h-10 brightness-0 invert" width={160} height={40} />
             </div>
             <p className="text-sm leading-relaxed">
               Built at the intersection of education expertise and responsible
@@ -32,18 +33,18 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Get in Touch</h4>
             <div className="flex flex-col gap-2 text-sm">
-              <a href="mailto:info@limesdigital.com" className="hover:text-lime-400 transition-colors">
-                info@limesdigital.com
+              <a href={`mailto:${EMAIL}`} className="hover:text-lime-400 transition-colors">
+                {EMAIL}
               </a>
-              <a href="tel:0478922177" className="hover:text-lime-400 transition-colors">
-                0478 922 177
+              <a href={PHONE_LINK} className="hover:text-lime-400 transition-colors">
+                {PHONE}
               </a>
             </div>
           </div>
         </div>
 
         <div className="border-t border-slate-700 mt-8 pt-8 text-center text-sm text-slate-500">
-          &copy; {new Date().getFullYear()} Smart Syllabus Assistant. All rights reserved.
+          &copy; {new Date().getFullYear()} {COMPANY_NAME}. Makers of {PRODUCT_NAME}. All rights reserved.
         </div>
       </div>
     </footer>

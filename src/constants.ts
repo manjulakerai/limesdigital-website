@@ -1,0 +1,6 @@
+export const CALENDLY_URL = 'https://calendly.com/limesdigital-info/15mins'
+export const PHONE = '0478 922 177'
+export const PHONE_LINK = 'tel:0478922177'
+export const EMAIL = 'info@limesdigital.com'
+export const COMPANY_NAME = 'Limes Digital'
+export const PRODUCT_NAME = 'Smart Syllabus Assistant'

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Phone } from 'lucide-react'
+import { PHONE, PHONE_LINK } from '../constants'
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
@@ -20,7 +21,7 @@ export default function Nav() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src="/logo.png" alt="Limes Digital" className="h-10" />
+            <img src="/logo.png" alt="Limes Digital" className="h-10" width={160} height={40} />
           </Link>
 
           {/* Desktop links */}
@@ -39,11 +40,11 @@ export default function Nav() {
               </Link>
             ))}
             <a
-              href="tel:0478922177"
+              href={PHONE_LINK}
               className="flex items-center gap-2 text-sm font-medium text-lime-700 bg-lime-50 px-4 py-2 rounded-lg hover:bg-lime-100 transition-colors"
             >
               <Phone size={16} />
-              0478 922 177
+              {PHONE}
             </a>
           </div>
 
@@ -51,6 +52,8 @@ export default function Nav() {
           <button
             className="md:hidden text-slate-600"
             onClick={() => setOpen(!open)}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
           >
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -72,11 +75,11 @@ export default function Nav() {
               </Link>
             ))}
             <a
-              href="tel:0478922177"
+              href={PHONE_LINK}
               className="flex items-center gap-2 mt-2 text-sm font-medium text-lime-700"
             >
               <Phone size={16} />
-              0478 922 177
+              {PHONE}
             </a>
           </div>
         )}
