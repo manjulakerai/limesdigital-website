@@ -7,13 +7,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-lime-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">LD</span>
-              </div>
-              <span className="text-lg font-semibold text-white">
-                Limes Digital
-              </span>
+            <div className="mb-4">
+              <img src="/logo.png" alt="Limes Digital" className="h-10 brightness-0 invert" />
             </div>
             <p className="text-sm leading-relaxed">
               Built at the intersection of education expertise and responsible

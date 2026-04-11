@@ -19,13 +19,8 @@ export default function Nav() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-lime-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">LD</span>
-            </div>
-            <span className="text-xl font-semibold text-slate-800">
-              Limes Digital
-            </span>
+          <Link to="/" className="flex items-center">
+            <img src="/logo.png" alt="Limes Digital" className="h-10" />
           </Link>
 
           {/* Desktop links */}

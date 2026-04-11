@@ -188,7 +188,7 @@ export default function About() {
           <p className="text-lime-100 text-lg mb-8">
             15 minutes. No obligation. Just a conversation about your school.
           </p>
-          <CTAButton to="/contact" variant="secondary">
+          <CTAButton href="https://calendly.com/limesdigital-info/15mins" variant="secondary">
             Book a 15 min call
           </CTAButton>
         </div>

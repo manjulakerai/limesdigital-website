@@ -35,7 +35,7 @@ export default function Home() {
           </ul>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton to="/contact">Book a 15 min call</CTAButton>
+            <CTAButton href="https://calendly.com/limesdigital-info/15mins">Book a 15 min call</CTAButton>
             <CTAButton to="/about" variant="secondary">
               See how it works
             </CTAButton>
@@ -70,7 +70,7 @@ export default function Home() {
             staff's week.
           </p>
           <div className="text-center">
-            <CTAButton to="/contact">Book a 15 min call</CTAButton>
+            <CTAButton href="https://calendly.com/limesdigital-info/15mins">Book a 15 min call</CTAButton>
           </div>
         </div>
       </section>
@@ -163,7 +163,7 @@ export default function Home() {
             staff's week. In one short call we'll see whether Smart Syllabus
             Assistant is a fit for a pilot at your school.
           </p>
-          <CTAButton to="/contact" variant="secondary">
+          <CTAButton href="https://calendly.com/limesdigital-info/15mins" variant="secondary">
             Book a 15 min call
           </CTAButton>
           <p className="text-lime-200 text-sm mt-4">

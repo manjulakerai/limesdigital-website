@@ -75,7 +75,7 @@ export default function Contact() {
               <h3 className="text-lg font-semibold text-slate-900 mb-2">
                 Book a call
               </h3>
-              <CTAButton to="/contact">Book a 15 min call</CTAButton>
+              <CTAButton href="https://calendly.com/limesdigital-info/15mins">Book a 15 min call</CTAButton>
               <p className="text-slate-500 text-sm mt-4">
                 No obligation. No tech commitment required.
               </p>
@@ -96,7 +96,7 @@ export default function Contact() {
             staff's week. In one short call we'll see whether Smart Syllabus
             Assistant is a fit for a pilot at your school.
           </p>
-          <CTAButton to="/contact" variant="secondary">
+          <CTAButton href="https://calendly.com/limesdigital-info/15mins" variant="secondary">
             Book a 15 min call
           </CTAButton>
         </div>
