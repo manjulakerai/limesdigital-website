@@ -11,8 +11,8 @@ function MockBrowser({ children, title }: { children: React.ReactNode; title: st
           <div className="w-3 h-3 rounded-full bg-green-300" />
         </div>
         <div className="flex-1 mx-3">
-          <a href="https://smartsyllabus.app" target="_blank" rel="noopener noreferrer" className="block bg-white rounded-md px-3 py-1 text-xs text-slate-400 hover:text-lime-600 text-center max-w-xs mx-auto transition-colors">
-            smartsyllabus.app
+          <a href="https://www.smartsyllabusassistant.com" target="_blank" rel="noopener noreferrer" className="block bg-white rounded-md px-3 py-1 text-xs text-slate-400 hover:text-lime-600 text-center max-w-xs mx-auto transition-colors">
+            www.smartsyllabusassistant.com
           </a>
         </div>
       </div>

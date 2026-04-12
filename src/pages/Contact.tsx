@@ -101,7 +101,7 @@ export default function Contact() {
               team. We'll send it within one business day.
             </p>
             <CTAButton
-              href={`mailto:${EMAIL}?subject=SSA%20one-pager%20request&body=Hi%2C%20please%20send%20me%20the%20Smart%20Syllabus%20Assistant%20overview%20for%20my%20school.`}
+              href={`mailto:${EMAIL}?subject=Smart%20Syllabus%20Assistant%20one-pager%20request&body=Hi%2C%20please%20send%20me%20the%20Smart%20Syllabus%20Assistant%20overview%20for%20my%20school.`}
               variant="secondary"
             >
               Request a one-pager
