@@ -90,6 +90,23 @@ export default function Contact() {
           <p className="text-slate-500 text-sm text-center mt-10">
             Built with teachers and principals across Australia and the UK.
           </p>
+
+          {/* Secondary lead capture */}
+          <div className="mt-12 bg-slate-50 rounded-xl p-8 border border-slate-100 text-center max-w-xl mx-auto">
+            <h3 className="text-lg font-semibold text-slate-900 mb-2">
+              Not ready to talk yet?
+            </h3>
+            <p className="text-slate-600 text-sm mb-4">
+              Request a one-page overview you can share with your leadership
+              team. We'll send it within one business day.
+            </p>
+            <CTAButton
+              href={`mailto:${EMAIL}?subject=SSA%20one-pager%20request&body=Hi%2C%20please%20send%20me%20the%20Smart%20Syllabus%20Assistant%20overview%20for%20my%20school.`}
+              variant="secondary"
+            >
+              Request a one-pager
+            </CTAButton>
+          </div>
         </div>
       </section>
     </div>

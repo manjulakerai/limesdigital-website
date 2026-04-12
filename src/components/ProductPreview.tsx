@@ -11,9 +11,9 @@ function MockBrowser({ children, title }: { children: React.ReactNode; title: st
           <div className="w-3 h-3 rounded-full bg-green-300" />
         </div>
         <div className="flex-1 mx-3">
-          <div className="bg-white rounded-md px-3 py-1 text-xs text-slate-400 text-center max-w-xs mx-auto">
+          <a href="https://smartsyllabus.app" target="_blank" rel="noopener noreferrer" className="block bg-white rounded-md px-3 py-1 text-xs text-slate-400 hover:text-lime-600 text-center max-w-xs mx-auto transition-colors">
             smartsyllabus.app
-          </div>
+          </a>
         </div>
       </div>
       {/* Content */}
@@ -100,13 +100,33 @@ function MockLessonPlan() {
           </p>
         </div>
 
-        {/* Phases */}
+        {/* Phases with woven-in teaching notes */}
         <div className="space-y-2">
           {[
-            { phase: 'Introduction', time: '8 min', detail: 'Hook: Show two contrasting ads. "Which one would make you buy?"' },
-            { phase: 'Explicit Instruction', time: '12 min', detail: 'Teach 4 persuasive techniques: ethos, pathos, logos, repetition' },
-            { phase: 'Guided Practice', time: '15 min', detail: 'Students annotate a print ad in pairs, identifying techniques' },
-            { phase: 'Independent Practice', time: '20 min', detail: 'Analyse a media text individually using the framework' },
+            {
+              phase: 'Engagement',
+              time: '8 min',
+              detail: 'Hook: Show two contrasting ads. "Which one would make you buy?"',
+              note: 'Student 3: Seat near screen — visual processing support',
+            },
+            {
+              phase: 'Explicit Teaching',
+              time: '12 min',
+              detail: 'Teach 4 persuasive techniques: ethos, pathos, logos, repetition',
+              note: 'Student 7: Provide printed key terms — reduces cognitive load',
+            },
+            {
+              phase: 'Guided Practice',
+              time: '15 min',
+              detail: 'Students annotate a print ad in pairs, identifying techniques',
+              note: 'Student 1: Pair with strong reader — scaffolded annotation template',
+            },
+            {
+              phase: 'Independent Practice',
+              time: '20 min',
+              detail: 'Analyse a media text individually using the framework',
+              note: 'Student 5: Offer choice of media text — high interest = deeper analysis',
+            },
           ].map((item) => (
             <div key={item.phase} className="flex gap-3 items-start">
               <div className="flex items-center gap-1.5 shrink-0 w-20">
@@ -116,24 +136,12 @@ function MockLessonPlan() {
               <div className="flex-1 min-w-0">
                 <p className="text-xs font-semibold text-slate-800">{item.phase}</p>
                 <p className="text-[11px] text-slate-500 leading-relaxed">{item.detail}</p>
+                <p className="text-[10px] text-teal-700 bg-teal-50 rounded px-1.5 py-0.5 mt-1 inline-block border border-teal-100">
+                  {item.note}
+                </p>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Differentiation */}
-        <div className="bg-blue-50 rounded-lg p-3 border border-blue-100">
-          <p className="text-[10px] font-semibold text-blue-700 uppercase tracking-wider mb-1">
-            Differentiation
-          </p>
-          <div className="space-y-1">
-            <p className="text-[11px] text-slate-600">
-              <span className="font-medium">Support:</span> Scaffolded template with sentence starters
-            </p>
-            <p className="text-[11px] text-slate-600">
-              <span className="font-medium">Extension:</span> Compare techniques across two different media forms
-            </p>
-          </div>
         </div>
       </div>
     </MockBrowser>

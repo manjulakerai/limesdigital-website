@@ -1,4 +1,4 @@
-import { Quote } from 'lucide-react'
+import { Quote, Shield, Calendar, Users, BookOpen } from 'lucide-react'
 import CTAButton from '../components/CTAButton'
 import SEO from '../components/SEO'
 import { CALENDLY_URL } from '../constants'
@@ -64,25 +64,23 @@ export default function About() {
           </h2>
           <div className="space-y-4 text-slate-600 text-lg leading-relaxed mb-8">
             <p>
-              Before Smart Syllabus Assistant, I ran 50+ web and AI projects through Limes Digital —
-              voice AI systems, automation workflows, content platforms. I've
-              conducted AI audits for businesses in finance, marketing, and
-              trades. I know what it takes to strip out inefficiency and rebuild
-              operations around what actually matters.
+              Before Smart Syllabus Assistant, I spent a decade working inside
+              schools and then built AI systems professionally. I know what it
+              takes to strip out inefficiency — and I know what teachers actually
+              need, because I watched them struggle with it firsthand.
             </p>
             <p>
-              Education is where that experience hits hardest. The teachers I've
-              spoken to don't need another app. They need the planning burden cut
-              in half — without losing curriculum integrity or their own
-              professional judgement.
+              The teachers I've spoken to don't need another app. They need the
+              planning burden cut in half — without losing curriculum integrity
+              or their own professional judgement.
             </p>
           </div>
 
           <div className="grid sm:grid-cols-3 gap-6">
             {[
-              { number: '10', label: 'Years in schools' },
-              { number: '50+', label: 'AI & web projects delivered' },
-              { number: 'All', label: 'NSW subjects supported' },
+              { number: '10', label: 'Years working in schools' },
+              { number: '50+', label: 'AI projects delivered' },
+              { number: '7+', label: 'NSW subjects and growing' },
             ].map((stat) => (
               <div
                 key={stat.label}
@@ -98,28 +96,42 @@ export default function About() {
         </div>
       </section>
 
-      {/* How It Actually Works */}
-      <section className="py-16 sm:py-20 bg-white">
+      {/* How It Actually Works — The Woven Plan */}
+      <section id="how-it-works" className="py-16 sm:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
             How Smart Syllabus Assistant works
           </h2>
+          <p className="text-lg text-slate-500 mb-8">
+            The Woven Plan&trade; — learner profiles woven into every phase of
+            every lesson, from the first week of term to the last.
+          </p>
           <div className="space-y-6">
             {[
               {
                 step: '1',
-                title: 'Set up student profiles',
-                desc: 'Teachers add anonymised learner profiles so the system understands who is in the room — learning needs, differentiation requirements, the full picture.',
+                title: 'Build your learner profiles (once)',
+                desc: 'Create a simple, anonymised profile for each student — their learning needs, strengths, accommodations, and what engages them. Takes a few minutes, done once per class. These profiles travel with every lesson you generate all year.',
               },
               {
                 step: '2',
-                title: 'Generate a term scope',
-                desc: 'Upload a scope and sequence document. Smart Syllabus Assistant maps it to NESA curriculum outcomes and produces a structured term plan — week by week, outcome by outcome.',
+                title: 'Generate your scope and sequence',
+                desc: 'Enter subject, year level, term, and weeks. Smart Syllabus Assistant builds a week-by-week scope anchored to verified NESA outcome codes — not approximations. Each week includes topic focus, outcome alignment, literacy and numeracy connections, and cross-curriculum priorities. Edit inline or regenerate individual weeks.',
               },
               {
                 step: '3',
-                title: 'Generate lesson plans',
-                desc: 'Pick a week from the scope. Smart Syllabus Assistant generates a complete lesson: learning intentions, success criteria, instructional phases, differentiated activities, and teaching notes — all aligned to the curriculum.',
+                title: 'Generate lessons shaped around your class',
+                desc: 'Pick any week from your scope and generate a full lesson plan. Every instructional phase — Engagement, Explicit Teaching, Guided Practice, Group Task, Independent Work, Closure — includes learning intentions, success criteria, timed activities, and specific teaching notes for individual students drawn directly from your learner profiles. Not in a differentiation box at the bottom — woven into every phase.',
+              },
+              {
+                step: '4',
+                title: 'Edit, refine, make it yours',
+                desc: 'Every lesson is fully editable. Adjust timing, rewrite activities, regenerate individual phases with natural language instructions ("make this more hands-on", "add a literacy focus"). The plan is a starting point built on solid curriculum foundations — you shape it to fit your classroom.',
+              },
+              {
+                step: '5',
+                title: 'Export, deliver, reflect',
+                desc: 'Export your finished lesson to Word in a structured, table-formatted layout that meets school submission standards. After you deliver the lesson, record what worked, what you would change, and rate the lesson\'s impact — building a feedback loop that strengthens your planning over time.',
               },
             ].map((item) => (
               <div
@@ -137,6 +149,160 @@ export default function About() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What makes this different from ChatGPT */}
+      <section className="py-16 sm:py-20 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 text-center">
+            What makes this different from ChatGPT
+          </h2>
+          <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
+            Teachers already use AI. The question is whether it actually meets
+            curriculum standards and knows your students.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {[
+              {
+                icon: <Shield size={24} />,
+                title: 'NESA-validated outcome codes',
+                desc: 'Every outcome code is checked against the NSW syllabus database before it reaches your plan. No invented codes. No surface-level alignment.',
+              },
+              {
+                icon: <Calendar size={24} />,
+                title: 'Scope before lesson',
+                desc: "Your term plan is built first. Week 3 knows what Week 2 covered. Week 4 knows what it needs to set up. Lessons are part of a coherent sequence, not generated in isolation.",
+              },
+              {
+                icon: <Users size={24} />,
+                title: 'Phase-level differentiation',
+                desc: 'Your students are not an afterthought. Each learner profile generates specific teaching adjustments inside every instructional phase — so differentiation is practical and immediate.',
+              },
+              {
+                icon: <BookOpen size={24} />,
+                title: 'Built for secondary',
+                desc: 'Years 7–12 only. HSC requirements, cross-curricular priorities, assessment weighting, mixed-ability classes — the complexity that generic AI tools gloss over.',
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                className="bg-white rounded-xl p-6 border border-slate-100"
+              >
+                <div className="text-lime-600 mb-3" aria-hidden="true">
+                  {card.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                  {card.title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed">{card.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Privacy & Data */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+          <h3 className="text-xl font-semibold text-slate-900 mb-4">
+            Your students' data stays safe
+          </h3>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center text-left">
+            {[
+              'All student data is anonymised — "Student 1", "Student 2". No real names are ever used or stored.',
+              'Learner profiles describe needs and strengths, not personal information.',
+              'Built in Australia, designed to meet school data handling expectations.',
+            ].map((item) => (
+              <div
+                key={item}
+                className="flex gap-3 items-start flex-1"
+              >
+                <Shield
+                  size={16}
+                  className="text-lime-600 mt-1 shrink-0"
+                  aria-hidden="true"
+                />
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 text-center">
+            Simple pricing
+          </h2>
+          <p className="text-slate-500 text-center mb-12 max-w-xl mx-auto">
+            Teachers can start individually. Schools can cover everyone.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {/* Teacher */}
+            <div className="bg-slate-50 rounded-xl p-8 border border-slate-100 flex flex-col">
+              <h3 className="text-lg font-semibold text-slate-900 mb-1">
+                Teacher licence
+              </h3>
+              <p className="text-3xl font-bold text-slate-900 mb-1">
+                $40<span className="text-base font-normal text-slate-500">/mo</span>
+              </p>
+              <p className="text-sm text-slate-500 mb-6">
+                Individual teacher. Cancel anytime.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-600 mb-6 flex-1">
+                {[
+                  'Unlimited scopes and lesson plans',
+                  'All subjects',
+                  'Learner profiles and differentiation',
+                  'DOCX export',
+                  'Delivery and impact tracking',
+                ].map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span className="text-lime-600 shrink-0">&#10003;</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-slate-400">
+                Free tier available — 1 scope, 3 lessons, no card required.
+              </p>
+            </div>
+
+            {/* School */}
+            <div className="rounded-xl p-8 border-2 border-lime-600 bg-lime-50 flex flex-col relative">
+              <span className="absolute -top-3 left-6 bg-lime-600 text-white text-xs font-semibold px-3 py-0.5 rounded-full">
+                Best value
+              </span>
+              <h3 className="text-lg font-semibold text-slate-900 mb-1">
+                School licence
+              </h3>
+              <p className="text-3xl font-bold text-slate-900 mb-1">
+                $3,000<span className="text-base font-normal text-slate-500">/yr</span>
+              </p>
+              <p className="text-sm text-slate-500 mb-6">
+                Whole school. ~$5 per teacher/month.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-600 mb-6 flex-1">
+                {[
+                  'Everything in Teacher licence',
+                  'Unlimited teacher seats',
+                  'Admin dashboard',
+                  'Onboarding and training support',
+                  'Priority support',
+                ].map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span className="text-lime-600 shrink-0">&#10003;</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <CTAButton href={CALENDLY_URL}>Book a 15 min call</CTAButton>
+            </div>
           </div>
         </div>
       </section>

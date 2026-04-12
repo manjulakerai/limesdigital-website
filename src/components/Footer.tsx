@@ -26,6 +26,9 @@ export default function Footer() {
               <Link to="/" className="text-sm hover:text-lime-400 transition-colors">Home</Link>
               <Link to="/about" className="text-sm hover:text-lime-400 transition-colors">About</Link>
               <Link to="/contact" className="text-sm hover:text-lime-400 transition-colors">Contact</Link>
+              <a href="https://smartsyllabus.app" className="text-sm hover:text-lime-400 transition-colors" target="_blank" rel="noopener noreferrer">
+                Teacher Login &rarr;
+              </a>
             </div>
           </div>
 

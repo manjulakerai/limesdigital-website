@@ -44,7 +44,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <CTAButton href={CALENDLY_URL}>Book a 15 min call</CTAButton>
-            <CTAButton to="/about" variant="secondary">
+            <CTAButton href="#how-it-works" variant="secondary">
               See how it works
             </CTAButton>
           </div>
@@ -62,6 +62,7 @@ export default function Home() {
               'Your staff are working well beyond sustainable hours just to keep up',
               'Early-career teachers are openly talking about leaving',
               "Experienced teachers are coasting because planning from scratch every term isn't worth the effort anymore",
+              '49% of secondary teachers teach at least some subjects out of field — and they still need to plan',
               "You've tried tools before — they created more work, not less",
               'Sunday nights are for lesson prep, not families',
             ].map((item) => (
@@ -84,28 +85,43 @@ export default function Home() {
       {/* Product Preview */}
       <ProductPreview />
 
-      {/* How It Works */}
-      <section className="py-16 sm:py-20 bg-slate-50">
+      {/* How It Works — The Woven Plan */}
+      <section id="how-it-works" className="py-16 sm:py-20 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-12 text-center">
-            How it works in your school
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2 text-center">
+            How it works — The Woven Plan&trade;
           </h2>
-          <div className="grid sm:grid-cols-3 gap-8">
+          <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
+            Most planning tools bolt differentiation on at the end. Smart
+            Syllabus Assistant weaves your students into every phase of every
+            lesson.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 step: '1',
-                title: 'Upload your syllabus',
-                desc: 'Your teacher uploads their scope and sequence document. Smart Syllabus Assistant maps it to curriculum outcomes and generates a structured term plan.',
+                title: 'Teachers build learner profiles',
+                desc: 'Anonymised profiles for each student — learning needs, strengths, accommodations. Done once per class, used in every lesson.',
               },
               {
                 step: '2',
-                title: 'Generate a lesson plan in minutes',
-                desc: 'Select a topic from the plan. Smart Syllabus Assistant generates a full lesson: learning intentions, activities, differentiation, resources. The teacher edits and owns it.',
+                title: 'Generate a term scope',
+                desc: 'Subject, year level, term, and weeks in. A NESA-aligned scope and sequence comes out — outcome by outcome, week by week.',
               },
               {
                 step: '3',
-                title: 'Reuse and adapt',
-                desc: "Plans carry forward across terms and year levels. Modify, don't recreate. The workload drops week after week.",
+                title: 'Generate lessons shaped by their class',
+                desc: 'Every instructional phase includes learning intentions, success criteria, timed activities, and teaching notes for individual students — woven in, not bolted on.',
+              },
+              {
+                step: '4',
+                title: 'Edit and make it theirs',
+                desc: 'Fully editable. Adjust timing, rewrite activities, regenerate phases with plain language. The plan is a starting point — your teachers shape it.',
+              },
+              {
+                step: '5',
+                title: 'Export, deliver, reflect',
+                desc: 'Export to Word for school submissions. After delivery, teachers record what worked and what to change — building a feedback loop.',
               },
             ].map((card) => (
               <div
@@ -123,9 +139,9 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <CTAButton to="/about" variant="secondary">
+            <CTAButton to="/about#how-it-works" variant="secondary">
               <span className="flex items-center gap-2">
-                See it in action <ArrowRight size={16} />
+                See the full breakdown <ArrowRight size={16} />
               </span>
             </CTAButton>
           </div>
