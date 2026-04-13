@@ -1,4 +1,4 @@
-import { CheckCircle, ArrowRight, HelpCircle } from 'lucide-react'
+import { CheckCircle, ArrowRight, HelpCircle, ShieldCheck } from 'lucide-react'
 import CTAButton from '../components/CTAButton'
 import SEO from '../components/SEO'
 import { CALENDLY_URL } from '../constants'
@@ -23,7 +23,7 @@ const tiers = [
     name: 'Teacher',
     price: '$40',
     period: '/mo',
-    description: 'Individual teacher. Cancel anytime.',
+    description: 'Individual teacher. 30-day money-back guarantee.',
     features: [
       'Unlimited scopes and lesson plans',
       'All 7+ subjects',
@@ -159,6 +159,18 @@ export default function Pricing() {
                 </CTAButton>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Money-back Guarantee */}
+      <section className="pb-16 sm:pb-20 bg-white">
+        <div className="max-w-xl mx-auto px-4 sm:px-6 text-center">
+          <div className="inline-flex items-center gap-3 bg-lime-50 border border-lime-200 rounded-full px-6 py-3">
+            <ShieldCheck size={24} className="text-lime-600 shrink-0" />
+            <p className="text-slate-700 font-medium">
+              30-day money-back guarantee — no questions asked
+            </p>
           </div>
         </div>
       </section>

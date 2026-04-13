@@ -252,7 +252,7 @@ export default function About() {
                 $40<span className="text-base font-normal text-slate-500">/mo</span>
               </p>
               <p className="text-sm text-slate-500 mb-6">
-                Individual teacher. Cancel anytime.
+                Individual teacher. 30-day money-back guarantee.
               </p>
               <ul className="space-y-2 text-sm text-slate-600 mb-6 flex-1">
                 {[
