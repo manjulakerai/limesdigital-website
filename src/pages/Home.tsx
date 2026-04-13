@@ -2,6 +2,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react'
 import CTAButton from '../components/CTAButton'
 import SocialProof from '../components/SocialProof'
 import ProductPreview from '../components/ProductPreview'
+import NewsletterSignup from '../components/NewsletterSignup'
 import SEO from '../components/SEO'
 import { CALENDLY_URL } from '../constants'
 
@@ -139,7 +140,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <CTAButton to="/about#how-it-works" variant="secondary">
+            <CTAButton to="/smart-syllabus-assistant#how-it-works" variant="secondary">
               <span className="flex items-center gap-2">
                 See the full breakdown <ArrowRight size={16} />
               </span>
@@ -150,6 +151,9 @@ export default function Home() {
 
       {/* Social Proof */}
       <SocialProof />
+
+      {/* Newsletter */}
+      <NewsletterSignup />
 
       {/* Bottom CTA */}
       <section className="py-16 sm:py-20 bg-gradient-to-br from-lime-600 to-lime-700">

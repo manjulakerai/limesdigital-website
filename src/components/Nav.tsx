@@ -8,12 +8,17 @@ export default function Nav() {
   const location = useLocation()
 
   const links = [
-    { to: '/', label: 'Home' },
+    { to: '/smart-syllabus-assistant', label: 'Product' },
+    { to: '/pricing', label: 'Pricing' },
+    { to: '/blog', label: 'Blog' },
     { to: '/about', label: 'About' },
     { to: '/contact', label: 'Contact' },
   ]
 
-  const isActive = (path: string) => location.pathname === path
+  const isActive = (path: string) =>
+    path === '/'
+      ? location.pathname === '/'
+      : location.pathname.startsWith(path)
 
   return (
     <nav className="bg-white border-b border-slate-100 sticky top-0 z-50">

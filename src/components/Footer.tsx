@@ -24,6 +24,9 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Links</h4>
             <div className="flex flex-col gap-2">
               <Link to="/" className="text-sm hover:text-lime-400 transition-colors">Home</Link>
+              <Link to="/smart-syllabus-assistant" className="text-sm hover:text-lime-400 transition-colors">Product</Link>
+              <Link to="/pricing" className="text-sm hover:text-lime-400 transition-colors">Pricing</Link>
+              <Link to="/blog" className="text-sm hover:text-lime-400 transition-colors">Blog</Link>
               <Link to="/about" className="text-sm hover:text-lime-400 transition-colors">About</Link>
               <Link to="/contact" className="text-sm hover:text-lime-400 transition-colors">Contact</Link>
               <a href="https://www.smartsyllabusassistant.com" className="text-sm hover:text-lime-400 transition-colors" target="_blank" rel="noopener noreferrer">

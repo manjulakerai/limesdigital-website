@@ -4,6 +4,11 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Product from './pages/Product'
+import Pricing from './pages/Pricing'
+import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
+import PilotOnePager from './pages/PilotOnePager'
 import NotFound from './pages/NotFound'
 
 function App() {
@@ -20,6 +25,11 @@ function App() {
         <main id="main-content" className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/smart-syllabus-assistant" element={<Product />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/pilot" element={<PilotOnePager />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
