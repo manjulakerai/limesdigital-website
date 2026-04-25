@@ -80,7 +80,7 @@ export default function About() {
             {[
               { number: '10', label: 'Years working in schools' },
               { number: '50+', label: 'AI projects delivered' },
-              { number: '7+', label: 'NSW subjects and growing' },
+              { number: '20', label: 'NSW subjects built in' },
             ].map((stat) => (
               <div
                 key={stat.label}
@@ -249,18 +249,17 @@ export default function About() {
                 Teacher licence
               </h3>
               <p className="text-3xl font-bold text-slate-900 mb-1">
-                $40<span className="text-base font-normal text-slate-500">/mo</span>
+                $25.99<span className="text-base font-normal text-slate-500">/mo</span>
               </p>
               <p className="text-sm text-slate-500 mb-6">
-                Individual teacher. 30-day money-back guarantee.
+                Individual licence.
               </p>
               <ul className="space-y-2 text-sm text-slate-600 mb-6 flex-1">
                 {[
-                  'Unlimited scopes and lesson plans',
-                  'All subjects',
-                  'Learner profiles and differentiation',
-                  'DOCX export',
-                  'Delivery and impact tracking',
+                  'Unlimited scopes & lessons',
+                  'All 20 subjects',
+                  'Delivery & impact tracking',
+                  'Priority support',
                 ].map((item) => (
                   <li key={item} className="flex gap-2">
                     <span className="text-lime-600 shrink-0">&#10003;</span>
@@ -289,11 +288,10 @@ export default function About() {
               </p>
               <ul className="space-y-2 text-sm text-slate-600 mb-6 flex-1">
                 {[
-                  'Everything in Teacher licence',
+                  'Everything in Teacher',
                   'Unlimited teacher seats',
                   'Admin dashboard',
-                  'Onboarding and training support',
-                  'Priority support',
+                  'Onboarding support',
                 ].map((item) => (
                   <li key={item} className="flex gap-2">
                     <span className="text-lime-600 shrink-0">&#10003;</span>

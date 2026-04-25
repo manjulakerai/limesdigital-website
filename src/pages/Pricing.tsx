@@ -1,4 +1,4 @@
-import { CheckCircle, ArrowRight, HelpCircle, ShieldCheck } from 'lucide-react'
+import { CheckCircle, ArrowRight, HelpCircle } from 'lucide-react'
 import CTAButton from '../components/CTAButton'
 import SEO from '../components/SEO'
 import { CALENDLY_URL } from '../constants'
@@ -13,7 +13,6 @@ const tiers = [
       '1 scope and sequence',
       '3 lesson plans',
       'Learner profiles',
-      'NESA-aligned outcomes',
       'DOCX export',
     ],
     cta: { label: 'Get started free', href: 'https://www.smartsyllabusassistant.com/signup' },
@@ -21,17 +20,14 @@ const tiers = [
   },
   {
     name: 'Teacher',
-    price: '$40',
+    price: '$25.99',
     period: '/mo',
-    description: 'Individual teacher. 30-day money-back guarantee.',
+    description: 'Individual licence.',
     features: [
-      'Unlimited scopes and lesson plans',
-      'All 7+ subjects',
-      'Learner profiles and differentiation',
-      'Phase-level teaching notes',
-      'DOCX export',
-      'Delivery and impact tracking',
-      'Inline editing and regeneration',
+      'Unlimited scopes & lessons',
+      'All 20 subjects',
+      'Delivery & impact tracking',
+      'Priority support',
     ],
     cta: { label: 'Start teaching plan', href: 'https://www.smartsyllabusassistant.com/signup' },
     highlight: false,
@@ -45,10 +41,7 @@ const tiers = [
       'Everything in Teacher',
       'Unlimited teacher seats',
       'Admin dashboard',
-      'Onboarding and training support',
-      'Priority support',
-      'Usage reporting',
-      'Dedicated account manager',
+      'Onboarding support',
     ],
     cta: { label: 'Book a school demo', href: CALENDLY_URL },
     highlight: true,
@@ -63,7 +56,7 @@ const faqs = [
   },
   {
     q: 'What subjects are supported?',
-    a: 'Commerce, English, Mathematics, Science, History, Geography, and PDHPE — all with verified NESA Stage 4 and Stage 5 outcome codes. More subjects are added regularly.',
+    a: '20 NSW subjects including English, Mathematics, Science, History, Geography, PDHPE, Commerce, Visual Arts, Music, Drama, Dance, and nine Technology subjects — all with verified NESA Stage 4 and Stage 5 outcome codes. More subjects added regularly.',
   },
   {
     q: 'How is this different from using ChatGPT?',
@@ -75,7 +68,7 @@ const faqs = [
   },
   {
     q: 'What does the school licence include?',
-    a: 'Unlimited teacher seats, admin dashboard, onboarding and training support, priority support, and usage reporting. We work with your leadership team to roll out effectively.',
+    a: 'Everything in Teacher, plus unlimited teacher seats, admin dashboard, and onboarding support. We work with your leadership team to roll out effectively.',
   },
   {
     q: 'Can I cancel anytime?',
@@ -92,7 +85,7 @@ export default function Pricing() {
     <div>
       <SEO
         title="Pricing"
-        description="Smart Syllabus Assistant pricing — Free tier, Teacher plan ($40/mo), and School licence ($3,000/yr). Start free, upgrade when you're ready."
+        description="Smart Syllabus Assistant pricing — Free tier, Teacher plan ($25.99/mo), and School licence ($3,000/yr). Start free, upgrade when you're ready."
         path="/pricing"
       />
 
@@ -163,18 +156,6 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* Money-back Guarantee */}
-      <section className="pb-16 sm:pb-20 bg-white">
-        <div className="max-w-xl mx-auto px-4 sm:px-6 text-center">
-          <div className="inline-flex items-center gap-3 bg-lime-50 border border-lime-200 rounded-full px-6 py-3">
-            <ShieldCheck size={24} className="text-lime-600 shrink-0" />
-            <p className="text-slate-700 font-medium">
-              30-day money-back guarantee — no questions asked
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Feature Comparison */}
       <section className="py-16 sm:py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -196,18 +177,13 @@ export default function Pricing() {
                   ['Scope and sequence', '1', 'Unlimited', 'Unlimited'],
                   ['Lesson plans', '3', 'Unlimited', 'Unlimited'],
                   ['Learner profiles', '\u2713', '\u2713', '\u2713'],
-                  ['NESA outcome verification', '\u2713', '\u2713', '\u2713'],
-                  ['All subjects', '\u2713', '\u2713', '\u2713'],
                   ['DOCX export', '\u2713', '\u2713', '\u2713'],
-                  ['Inline editing', '\u2713', '\u2713', '\u2713'],
-                  ['Phase regeneration', '\u2014', '\u2713', '\u2713'],
-                  ['Delivery tracking', '\u2014', '\u2713', '\u2713'],
-                  ['Impact recording', '\u2014', '\u2713', '\u2713'],
+                  ['All 20 subjects', '\u2713', '\u2713', '\u2713'],
+                  ['Delivery & impact tracking', '\u2014', '\u2713', '\u2713'],
+                  ['Priority support', '\u2014', '\u2713', '\u2713'],
                   ['Teacher seats', '1', '1', 'Unlimited'],
                   ['Admin dashboard', '\u2014', '\u2014', '\u2713'],
                   ['Onboarding support', '\u2014', '\u2014', '\u2713'],
-                  ['Priority support', '\u2014', '\u2014', '\u2713'],
-                  ['Usage reporting', '\u2014', '\u2014', '\u2713'],
                 ].map(([feature, free, teacher, school]) => (
                   <tr key={feature} className="border-b border-slate-100">
                     <td className="py-3 pr-4">{feature}</td>

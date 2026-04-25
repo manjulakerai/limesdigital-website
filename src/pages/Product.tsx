@@ -172,7 +172,7 @@ export default function Product() {
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
-            7 NSW subjects and growing
+            20 NSW subjects and growing
           </h2>
           <p className="text-slate-500 mb-10 max-w-xl mx-auto">
             Full NESA syllabus outcomes loaded for Stage 4 and Stage 5. More
@@ -180,13 +180,26 @@ export default function Product() {
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              'Commerce',
               'English',
               'Mathematics',
               'Science',
               'History',
               'Geography',
               'PDHPE',
+              'Commerce',
+              'Visual Arts',
+              'Music',
+              'Drama',
+              'Dance',
+              'Technology Mandatory',
+              'Food Technology',
+              'Computing Technology',
+              'Textiles Technology',
+              'Agricultural Technology',
+              'Photography, Film and Digital Media',
+              'Engineering Technology',
+              'Industrial Technology',
+              'Design Innovation Technology',
             ].map((subject) => (
               <span
                 key={subject}
@@ -223,15 +236,9 @@ export default function Product() {
               <tbody className="text-slate-600">
                 {[
                   ['NESA outcome codes verified', 'No', 'Yes'],
-                  ['Scope and sequence first', 'No', 'Yes'],
-                  ['Learner profiles per student', 'No', 'Yes'],
-                  ['Differentiation in every phase', 'No', 'Yes — The Woven Plan\u2122'],
-                  ['10 High Impact Teaching Strategies', 'Sometimes', 'Built in'],
-                  ['APST standards mapped', 'No', 'Yes'],
-                  ['Exact phase timing', 'No', 'Yes'],
-                  ['DOCX export for submissions', 'No', 'Yes'],
-                  ['Delivery and impact tracking', 'No', 'Yes'],
-                  ['NSW secondary focus', 'Generic', 'Years 7\u201312 only'],
+                  ['Scope before lesson (connected planning)', 'No', 'Yes'],
+                  ['Learner profiles woven into every phase', 'No', 'Yes'],
+                  ['Built specifically for NSW Years 7\u201312', 'Generic', 'Yes'],
                 ].map(([feature, chatgpt, ssa]) => (
                   <tr key={feature} className="border-b border-slate-100">
                     <td className="py-3 pr-4">{feature}</td>
